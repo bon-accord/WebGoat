@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-2019'
 
 steps:
 # - task: Maven@3
@@ -21,8 +21,8 @@ steps:
 #     testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #     goals: 'package'
 
-- script: rm -rf ~/.m2/repository
-  displayName: Prevent Error
+# - script: rm -rf ~/.m2/repository
+#   displayName: Prevent Error
 
 - script: mvn clean install
   displayName: Maven Build
